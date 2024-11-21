@@ -74,8 +74,6 @@ Setup the samba folder:
 
 You should be able to access this folder now over the network ([link for further instructions](https://pimylifeup.com/raspberry-pi-samba/)). 
 
-## Connect to the shared folder from Windows
-
 To connect to your Samba on Windows, begin by opening up the “File Explorer“. Within the “File Explorer” click the “Computer” tab then click “Map network drive”. You will now be greeted by the dialog shown below asking you to enter some details.
 
 Within the “Folder” textbox you will want to enter the following “\\raspberrypi\images“. If for any reason the connection fails, you can switch out “raspberrypi” with your Raspberry Pi’s local IP address (find this on the Pi using ```hostname -I```)
@@ -84,9 +82,7 @@ Once done, click the “Finish” button to finalize the connection.
 
 Copy the "WriteImgSD.py" and "mass_image_writer.service" files into this folder and create a new folder called "compressedImages".
 
-## Run on boot setup
-
-Add mass_image_writer.service to the /etc/systemd/system Folder. This file can be moved over from the files current directory by using:
+To setup this script to run on boot, add mass_image_writer.service to the /etc/systemd/system Folder. This file can be moved over from the files current directory by using:
 
     mv mass_image_writer.service /etc/systemmd/system
 
