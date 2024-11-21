@@ -28,9 +28,17 @@ Disk images are transferred to the Raspberry Pi via a Samba shared folder. The s
 
 Use the Raspberry Pi Imager ([Link](https://www.raspberrypi.com/software/)) to install Raspberry Pi OS (64-bit) onto an SD card that is large enough to store multiple large img files (32Gb or larger is recommended).
 
-Create a user on the Pi with the following credentials:
-  User = MassImageWriter
-  Password = MassImageWriter123
+Use the following OS customisation settings:
+
+GENERAL
+- Username: MassImageWriter
+- Password: MassImageWriter123
+- Time zone: Australia/Sydney
+- Keyboard layout: us
+
+SERVICES
+- Enable SSH
+- Use password authentication
 
 Once the Pi is booted with this SD card either open a terminal window on the Pi or SSD into it. Run the following commands on the Pi to install the required files:
 
