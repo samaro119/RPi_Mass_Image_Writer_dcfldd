@@ -42,6 +42,8 @@ Once the Pi is booted with this SD card either open a terminal window on the Pi 
 
 This will install the required packages for the dcfldd write command, the LCD display and the Samba shared folder. If the adafruit-circuitpython-charlcd install fails try this command instead ```sudo pip3 install adafruit-circuitpython-charlcd --system```.
 
+The I2C interface will need to be enabled to use the LCD display. More detailed instructions for enabling I2C can be found [here](https://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/).
+
 Create the folder to be shared on the network:
 
     mkdir Desktop/images
