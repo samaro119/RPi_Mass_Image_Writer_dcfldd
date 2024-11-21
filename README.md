@@ -57,6 +57,7 @@ The I2C interface will need to be enabled to use the LCD display.
     sudo raspi-config
 
 Interface Options -> I2C -> Yes -> Ok -> Finish
+
 More detailed instructions for enabling I2C can be found [here](https://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/).
 
 Create the folder to be shared on the network:
