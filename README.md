@@ -107,7 +107,7 @@ Copy the "WriteImgSD.py" and "mass_image_writer.service" files into this folder 
 
 To setup this script to run on boot, add mass_image_writer.service to the /etc/systemd/system Folder. This file can be moved over from the files current directory by using:
 
-    mv mass_image_writer.service /etc/systemmd/system
+    sudo mv Desktop/images/mass_image_writer.service /etc/systemd/system
 
 Run the following commands to have this service run on boot:
 
