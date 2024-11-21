@@ -8,7 +8,7 @@ Disk images are transferred to the Raspberry Pi via a Samba shared folder. The s
 ## How to use?
 
 1. Login to the shared folder on the Pi
-2. Transfer image files to the shared folder (/home/MassImageWriter/Desktop/images)
+2. Transfer image files to the "compressedImages" shared folder ```/home/MassImageWriter/Desktop/images/compressedImages```
 3. Plug in all devices to write image files onto.
 4. Use the Up and Down buttons to cycle between the menu options: ("Select img file to install?", "Find connected devices?", "Reboot?", "Shutdown")
 5. Use the Select button to chose an option.
