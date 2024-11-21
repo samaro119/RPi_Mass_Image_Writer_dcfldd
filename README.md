@@ -86,7 +86,10 @@ Save and exit the config file with ```ctrl + S``` and ```ctrl + X```.
 Setup the samba folder:
 
     sudo systemctl start smbd
-    sudo smbpasswd -a root
+    sudo smbpasswd -a MassImageWriter
+    
+You will be prompted to create a password for this user. Use the same password as the login password "MassImageWriter123"
+
     sudo systemctl restart smbd
     systemctl enable smbd
 
