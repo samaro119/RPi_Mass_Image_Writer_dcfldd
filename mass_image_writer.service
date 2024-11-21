@@ -1,0 +1,15 @@
+[Unit]
+Description=Mass Image Writer Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/MassImageWriter/Desktop/images/writeImgSD.py
+Restart=always
+User=MassImageWriter
+WorkingDirectory=/home/MassImageWriter/Desktop/images
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
