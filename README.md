@@ -93,6 +93,8 @@ You will be prompted to create a password for this user. Use the same password a
     sudo systemctl restart smbd
     systemctl enable smbd
 
+The enable command will prompt you to enter the user password a few times to authenticate.
+
 You should be able to access this folder now over the network ([link for further instructions](https://pimylifeup.com/raspberry-pi-samba/)). 
 
 To connect to your Samba on Windows, begin by opening up the “File Explorer“. Within the “File Explorer” click the “Computer” tab then click “Map network drive”. You will now be greeted by the dialog shown below asking you to enter some details.
