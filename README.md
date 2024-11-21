@@ -86,7 +86,7 @@ Save and exit the config file with ```ctrl + S``` and ```ctrl + X```.
 Setup the samba folder:
 
     sudo systemctl start smbd
-    smbpasswd -a root
+    sudo smbpasswd -a root
     sudo systemctl restart smbd
     systemctl enable smbd
 
