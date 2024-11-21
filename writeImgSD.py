@@ -35,6 +35,20 @@ lcd.message = "MassImageWriter\nPress up/down..."
 
 def powerOff():
     lcd.clear()
+    lcd.message = "Shutting down"
+    time.sleep(0.5)
+    lcd.message = "Shutting down."
+    time.sleep(0.5)
+    lcd.message = "Shutting down.."
+    time.sleep(0.5)
+    lcd.message = "Shutting down..."
+    time.sleep(0.5)
+    lcd.clear()
+    lcd.color = [0, 0, 0]
+    subprocess.run(["sudo","poweroff"], capture_output=True, text=True)
+
+def reboot():
+    lcd.clear()
     lcd.message = "Rebooting"
     time.sleep(0.5)
     lcd.message = "Rebooting."
@@ -163,6 +177,8 @@ while True:
                 lcd.message = "Find connected\ndevices?"
             elif submenu_state == 2:
                 lcd.message = "Reboot?"
+            elif submenu_state == 3:
+                lcd.message = "Shutdown?"
 
             # Menu item is selected
             if lcd.select_button:
@@ -179,8 +195,12 @@ while True:
                     program_state = 0
                     # Display connected devices
                     find_and_display_devices()
-                # Shutdown Pi
+                # Restarts the Pi
                 if submenu_state == 2:
+                    # Restart the Pi
+                    reboot()
+                # Shutdown Pi
+                if submenu_state == 3:
                     # Powers down the Pi
                     powerOff()
 
@@ -188,7 +208,7 @@ while True:
             elif lcd.up_button:
                 lcd.clear()
                 last_pressed_time = current_time
-                if submenu_state == 2:
+                if submenu_state == 3:
                     submenu_state = 0
                 else:
                     submenu_state += 1
@@ -197,7 +217,7 @@ while True:
                 lcd.clear()
                 last_pressed_time = current_time
                 if submenu_state == 0:
-                    submenu_state = 2
+                    submenu_state = 3
                 else:
                     submenu_state -= 1
 
