@@ -1,0 +1,9 @@
+[images]
+   comment= Pi Shared Image Folder
+   path= /home/MassImageWriter/Desktop/images
+   browseable=Yes
+   writeable=Yes
+   only guest=no
+   create mask=0777
+   directory mask=0777
+   public=yes
