@@ -41,19 +41,19 @@ SERVICES
 - Use password authentication
 
 Once the Pi is booted with this SD card either open a terminal window on the Pi or SSD into it. Run the following commands on the Pi to install the required files:
-1
+
 
     sudo apt update
-2
+
 
     sudo apt-get upgrade
-3
+
 
     sudo apt install dcfldd
-4
+
 
     pip3 install adafruit-circuitpython-charlcd
-5
+
 
     sudo apt-get install samba samba-common-bin
 
