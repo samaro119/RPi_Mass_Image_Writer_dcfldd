@@ -44,18 +44,13 @@ Once the Pi is booted with this SD card either open a terminal window on the Pi 
 
 
     sudo apt update
-
-
     sudo apt-get upgrade
-
-
     sudo apt install dcfldd
-
-
+    sudo apt-get install samba samba-common-bin
     pip3 install adafruit-circuitpython-charlcd
 
 
-    sudo apt-get install samba samba-common-bin
+    
 
 This will install the required packages for the dcfldd write command, the LCD display and the Samba shared folder. If the adafruit-circuitpython-charlcd install fails try this command instead:
 
@@ -71,8 +66,7 @@ More detailed instructions for enabling I2C can be found [here](https://www.rasp
 
 Create the folder to be shared on the network:
 
-    mkdir Desktop/images
-    chmod 777 Desktop/images
+    mkdir -m 777 Desktop/images
 
 Open the samba config file with the nano editor:
 
@@ -83,9 +77,7 @@ Add the following text to the bottom of the smb.conf file:
     [images]
        comment= Pi Shared Image Folder
        path= /home/MassImageWriter/Desktop/images
-       browseable=Yes
        writeable=Yes
-       only guest=no
        create mask=0777
        directory mask=0777
        public=yes
