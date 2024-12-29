@@ -41,11 +41,20 @@ SERVICES
 - Use password authentication
 
 Once the Pi is booted with this SD card either open a terminal window on the Pi or SSD into it. Run the following commands on the Pi to install the required files:
+1
 
     sudo apt update
+2
+
     sudo apt-get upgrade
+3
+
     sudo apt install dcfldd
+4
+
     pip3 install adafruit-circuitpython-charlcd
+5
+
     sudo apt-get install samba samba-common-bin
 
 This will install the required packages for the dcfldd write command, the LCD display and the Samba shared folder. If the adafruit-circuitpython-charlcd install fails try this command instead:
