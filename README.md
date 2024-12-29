@@ -112,7 +112,9 @@ To setup this script to run on boot, add mass_image_writer.service to the /etc/s
 Run the following commands to have this service run on boot:
 
     sudo systemctl daemon-reload
+    
     sudo systemctl enable mass_image_writer.service
+    
     sudo systemctl start mass_image_writer.service
 
 When the last command is finished the LCD display should turn on and start the Mass Image Writer script. If you suspect an error has occured use the following command for troubleshooting:
