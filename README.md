@@ -1,4 +1,4 @@
-# Raspberry Pi Mass ImageWriter (dcfldd)
+# Raspberry Pi Mass Image Writer (dcfldd)
 Raspberry Pi 5 that writes to many USB drives in one go. Use the LCD Keypad buttons to select the stored disk image to copy as well as reboot the device. 
 
 Up and Down buttons are used to navigate the menu, Select button is used to confirm. When given a confirmation choice the Select button confirms the choice and any other button will cancel.
